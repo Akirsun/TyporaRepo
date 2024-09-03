@@ -16,5 +16,5 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: python3 new_version.py
       - uses: JS-DevTools/npm-publish@v1
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+        with:
+          token: ${{secrets.npm_token}}
